@@ -696,6 +696,41 @@ h3 {
   text-align: center;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--rose);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 24px;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(57, 45, 49, 0.18);
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  background: var(--rose-dark);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid rgba(196, 126, 141, 0.45);
+  outline-offset: 3px;
+}
+
+.back-to-top[hidden] {
+  display: none;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
