@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#fcf7f4">
     <meta name="description" content="Portfolio Rifa, mahasiswa Sistem Informasi yang membuat aplikasi web dan mobile.">
     <title>Portofolio Rifa Aidah</title>
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=20">
     <script src="script.js?v=2" defer></script>
   </head>
   <body>
@@ -28,18 +28,44 @@
 
     <main>
       <section class="hero" id="beranda">
+        <div class="hero-dots" aria-hidden="true"></div>
+        <span class="hero-code" aria-hidden="true">&lt;/&gt;</span>
+        <svg class="hero-sparkle" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m12 1 2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3L12 1Z" />
+        </svg>
+        <svg class="hero-botanical" viewBox="0 0 120 210" fill="none" aria-hidden="true">
+          <path d="M15 198C48 164 65 113 99 15" />
+          <path class="botanical-leaf" d="M54 132c-23-4-36-19-35-39 19 3 32 16 35 39Z" />
+          <path class="botanical-leaf" d="M68 100c0-22 11-38 31-44 2 19-9 35-31 44Z" />
+          <path class="botanical-leaf" d="M86 56c-18-8-27-23-23-41 16 5 25 20 23 41Z" />
+          <path class="botanical-leaf" d="M37 167c-2-20-14-33-32-37-1 16 11 30 32 37Z" />
+        </svg>
+        <svg class="hero-flower" viewBox="0 0 120 130" fill="none" aria-hidden="true">
+          <path d="M60 67v54" />
+          <path class="flower-leaf" d="M60 103c-12-13-24-11-34-4 9 12 20 15 34 4Z" />
+          <path class="flower-leaf" d="M60 113c10-13 22-14 34-7-8 12-19 17-34 7Z" />
+          <path class="flower-petal" d="M60 68C48 58 47 42 60 25c13 17 12 33 0 43Z" />
+          <path class="flower-petal" d="M61 67c-3-16 7-29 26-34 4 20-5 32-26 34Z" />
+          <path class="flower-petal" d="M62 68c11-12 27-12 42-1-12 17-27 18-42 1Z" />
+          <path class="flower-petal" d="M59 69c13 9 16 25 6 42-18-11-20-26-6-42Z" />
+          <path class="flower-petal" d="M58 68C43 80 28 78 16 63c16-13 31-11 42 5Z" />
+          <path class="flower-petal" d="M59 66C43 63 35 50 39 31c20 4 27 17 20 35Z" />
+          <circle class="flower-center" cx="60" cy="67" r="5" />
+        </svg>
+        <div class="hero-content">
           <h1>Hai, saya Rifa Aidah</h1>
-          <p class="hero-copy">Ini kumpulan proyek dan hal yang sudah saya pelajari.</p>
           <div class="hero-actions">
             <a class="button" href="#proyek">Lihat proyek</a>
-            <a class="button button-outline" href="#profil">Profil singkat</a>
+            <a class="button button-outline" href="#profil">Profil</a>
           </div>
         </div>
+        <svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 24C240 66 440 62 720 34S1200 12 1440 38V70H0Z" />
+        </svg>
       </section>
 
       <section class="story section-narrow" id="profil">
-        <p class="eyebrow">Tentang saya</p>
-        <h2>Profil singkat</h2>
+        <h2>Profil</h2>
         <p>Mahasiswa Sistem Informasi di Universitas Bina Sarana Informatika. Suka membuat aplikasi dan terus belajar dari setiap proyek.</p>
       </section>
 
@@ -47,31 +73,25 @@
         <div class="section-heading">
           <h2>Skill</h2>
         </div>
-        <div class="skill-grid">
-          <article class="skill-card">
-            <h3>Website dengan Laravel</h3>
-            <p>Membuat fitur web dengan Laravel dan PHP.</p>
-            <span>Laravel · PHP</span>
+        <div class="skill-categories">
+          <article class="skill-category">
+            <h3>Frontend Developer</h3>
+            <ul class="technology-list">
+              <li><span class="technology-icon icon-html" aria-hidden="true"><img src="assets/icons/html5.svg" alt="" width="24" height="24"></span><span>HTML</span></li>
+              <li><span class="technology-icon icon-css" aria-hidden="true"><img src="assets/icons/css3.svg" alt="" width="24" height="24"></span><span>CSS</span></li>
+              <li><span class="technology-icon icon-javascript" aria-hidden="true"><img src="assets/icons/javascript.svg" alt="" width="24" height="24"></span><span>JavaScript</span></li>
+              <li><span class="technology-icon icon-flutter" aria-hidden="true"><img src="assets/icons/flutter.svg" alt="" width="24" height="24"></span><span>Flutter</span></li>
+              <li><span class="technology-icon icon-dart" aria-hidden="true"><img src="assets/icons/dart.svg" alt="" width="24" height="24"></span><span>Dart</span></li>
+            </ul>
           </article>
-          <article class="skill-card">
-            <h3>Aplikasi Android</h3>
-            <p>Membuat aplikasi Android dengan Flutter.</p>
-            <span>Flutter</span>
-          </article>
-          <article class="skill-card">
-            <h3>REST API</h3>
-            <p>Menghubungkan aplikasi ke REST API untuk mengelola data.</p>
-            <span>REST API</span>
-          </article>
-          <article class="skill-card">
-            <h3>Chatbot belajar</h3>
-            <p>Membuat chatbot yang bisa merangkum materi dan menjawab pertanyaan.</p>
-            <span>Gemini API</span>
-          </article>
-          <article class="skill-card">
-            <h3>Kerja tim</h3>
-            <p>Bekerja sama dan berbagi tugas saat mengerjakan proyek.</p>
-            <span>Kerja tim</span>
+          <article class="skill-category">
+            <h3>Backend Developer</h3>
+            <ul class="technology-list">
+              <li><span class="technology-icon icon-php" aria-hidden="true"><img src="assets/icons/php.svg" alt="" width="24" height="24"></span><span>PHP</span></li>
+              <li><span class="technology-icon icon-laravel" aria-hidden="true"><img src="assets/icons/laravel.svg" alt="" width="24" height="24"></span><span>Laravel</span></li>
+              <li><span class="technology-icon icon-mysql" aria-hidden="true"><img src="assets/icons/mysql.svg" alt="" width="24" height="24"></span><span>MySQL</span></li>
+              <li><span class="technology-icon icon-node" aria-hidden="true"><img src="assets/icons/nodedotjs.svg" alt="" width="24" height="24"></span><span>Node.js</span></li>
+            </ul>
           </article>
         </div>
       </section>
@@ -83,9 +103,9 @@
 
         <article class="project-row project-featured">
           <div class="project-description">
-            <p class="eyebrow">Laravel · Proyek Perkuliahan</p>
-            <h3>Sistem informasi perpustakaan</h3>
-            <p>Mengembangkan aplikasi web admin untuk mengelola buku, anggota, petugas, dan peminjaman.</p>
+            <p class="eyebrow">Laravel · PHP · MySQL</p>
+            <h3>Sistem perpustakaan</h3>
+            <p>Aplikasi web admin untuk mengelola buku, anggota, petugas, dan peminjaman.</p>
           </div>
           <a class="media-placeholder media-library screenshot-link" href="assets/library-dashboard.png" target="_blank" rel="noopener" aria-label="Buka screenshot dashboard Sistem Perpustakaan">
             <img class="project-screenshot" src="assets/library-dashboard.png" alt="Dashboard admin Sistem Perpustakaan dengan menu data buku, anggota, petugas, dan peminjaman" loading="lazy">
@@ -95,9 +115,9 @@
 
         <article class="project-row bouquet-project">
           <div class="project-description">
-            <p class="eyebrow">Laravel · Proyek Perkuliahan</p>
+            <p class="eyebrow">Laravel · PHP · MySQL</p>
             <h3>Toko buket online</h3>
-            <p>Aplikasi toko buket online dikembangkan berdua dengan rekan tim. Pelanggan bisa melihat katalog dan memesan buket, sementara admin mengelola produk dan pesanan.</p>
+            <p>Aplikasi web toko buket yang dikerjakan berdua dengan teman. Pelanggan bisa melihat katalog dan memesan buket, sementara admin mengelola produk dan pesanan.</p>
           </div>
           <div class="media-pair bouquet-screenshots">
             <a class="media-placeholder screenshot-link" href="assets/bouquet-admin.png" target="_blank" rel="noopener" aria-label="Buka screenshot dashboard admin Toko Buket Online">
@@ -113,9 +133,9 @@
 
         <article class="project-row">
           <div class="project-description">
-            <p class="eyebrow">Flutter · REST API · Proyek Perkuliahan</p>
+            <p class="eyebrow">Flutter · Dart · REST API (MockAPI)</p>
             <h3>Aplikasi resep makanan tradisional</h3>
-            <p>Mengembangkan aplikasi admin untuk mengelola resep makanan tradisional.</p>
+            <p>Aplikasi admin untuk mengelola resep makanan tradisional.</p>
           </div>
           <div class="media-pair media-portrait-pair">
             <a class="media-placeholder screenshot-link" href="assets/recipe-admin-1.jpg" target="_blank" rel="noopener" aria-label="Buka screenshot halaman pertama Admin Resep Tradisional">
@@ -137,7 +157,8 @@
         <article class="training-card">
           <div class="training-description">
             <h3>Pinky AI</h3>
-            <p>Mengembangkan chatbot asisten belajar berbasis Gemini API untuk merangkum materi dan menjawab pertanyaan pengguna.</p>
+            <p>Chatbot asisten belajar berbasis Gemini API untuk merangkum materi dan menjawab pertanyaan pengguna.</p>
+            <p class="training-tags">HTML · CSS · JavaScript · Node.js · Gemini API</p>
           </div>
           <div class="media-pair chatbot-screenshots">
             <a class="media-placeholder screenshot-link" href="assets/pinky-ai-summary.png" target="_blank" rel="noopener" aria-label="Buka screenshot ringkasan Pinky AI">
