@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#fcf7f4">
     <meta name="description" content="Portfolio Rifa, mahasiswa Sistem Informasi yang membuat aplikasi web dan mobile.">
     <title>Portofolio Rifa Aidah</title>
-    <link rel="stylesheet" href="styles.css?v=20">
-    <script src="script.js?v=2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=21">
+    <script src="script.js?v=3" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -105,7 +105,9 @@
           <div class="project-description">
             <p class="eyebrow">Laravel · PHP · MySQL</p>
             <h3>Sistem perpustakaan</h3>
-            <p>Aplikasi web admin untuk mengelola buku, anggota, petugas, dan peminjaman.</p>
+            <button class="button project-detail-trigger" type="button" aria-haspopup="dialog" aria-controls="library-detail">
+              Lihat detail <span aria-hidden="true">→</span>
+            </button>
           </div>
           <a class="media-placeholder media-library screenshot-link" href="assets/library-dashboard.png" target="_blank" rel="noopener" aria-label="Buka screenshot dashboard Sistem Perpustakaan">
             <img class="project-screenshot" src="assets/library-dashboard.png" alt="Dashboard admin Sistem Perpustakaan dengan menu data buku, anggota, petugas, dan peminjaman" loading="lazy">
@@ -117,7 +119,9 @@
           <div class="project-description">
             <p class="eyebrow">Laravel · PHP · MySQL</p>
             <h3>Toko buket online</h3>
-            <p>Aplikasi web toko buket yang dikerjakan berdua dengan teman. Pelanggan bisa melihat katalog dan memesan buket, sementara admin mengelola produk dan pesanan.</p>
+            <button class="button project-detail-trigger" type="button" aria-haspopup="dialog" aria-controls="bouquet-detail">
+              Lihat detail <span aria-hidden="true">→</span>
+            </button>
           </div>
           <div class="media-pair bouquet-screenshots">
             <a class="media-placeholder screenshot-link" href="assets/bouquet-admin.png" target="_blank" rel="noopener" aria-label="Buka screenshot dashboard admin Toko Buket Online">
@@ -135,7 +139,9 @@
           <div class="project-description">
             <p class="eyebrow">Flutter · Dart · REST API (MockAPI)</p>
             <h3>Aplikasi resep makanan tradisional</h3>
-            <p>Aplikasi admin untuk mengelola resep makanan tradisional.</p>
+            <button class="button project-detail-trigger" type="button" aria-haspopup="dialog" aria-controls="recipe-detail">
+              Lihat detail <span aria-hidden="true">→</span>
+            </button>
           </div>
           <div class="media-pair media-portrait-pair">
             <a class="media-placeholder screenshot-link" href="assets/recipe-admin-1.jpg" target="_blank" rel="noopener" aria-label="Buka screenshot halaman pertama Admin Resep Tradisional">
@@ -150,15 +156,103 @@
         </article>
       </section>
 
+      <dialog class="project-detail-dialog" id="library-detail" aria-labelledby="library-detail-title">
+        <div class="project-detail-content">
+          <button class="project-detail-close" type="button" aria-label="Tutup detail">×</button>
+          <h2 id="library-detail-title">Sistem perpustakaan</h2>
+          <img class="project-detail-image" src="assets/library-dashboard.png" alt="Dashboard admin Sistem Perpustakaan">
+          <h3>Fitur proyek</h3>
+          <ul class="project-detail-feature-list">
+            <li>
+              <strong>Kelola buku</strong>
+              <p>Admin bisa menambah, mengubah, dan menghapus data buku.</p>
+            </li>
+            <li>
+              <strong>Anggota dan petugas</strong>
+              <p>Data anggota dan petugas perpustakaan bisa dicatat dan dikelola di satu tempat.</p>
+            </li>
+            <li>
+              <strong>Peminjaman</strong>
+              <p>Setiap peminjaman dan pengembalian buku dicatat, jadi mudah dilacak.</p>
+            </li>
+            <li>
+              <strong>Ringkasan data</strong>
+              <p>Dashboard menampilkan gambaran singkat data perpustakaan.</p>
+            </li>
+          </ul>
+        </div>
+      </dialog>
+
+      <dialog class="project-detail-dialog" id="bouquet-detail" aria-labelledby="bouquet-detail-title">
+        <div class="project-detail-content">
+          <button class="project-detail-close" type="button" aria-label="Tutup detail">×</button>
+          <h2 id="bouquet-detail-title">Toko buket online</h2>
+          <div class="project-detail-gallery">
+            <img class="project-detail-image" src="assets/bouquet-storefront.png" alt="Halaman toko buket untuk pelanggan">
+            <img class="project-detail-image" src="assets/bouquet-admin.png" alt="Dashboard admin toko buket">
+          </div>
+          <h3>Fitur proyek</h3>
+          <ul class="project-detail-feature-list">
+            <li>
+              <strong>Pelanggan</strong>
+              <ul class="bouquet-feature-items">
+                <li>Melihat dan memilih buket yang tersedia</li>
+                <li>Memesan buket</li>
+                <li>Memantau status pesanan sampai diterima</li>
+                <li>Memberi rating pada produk</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Admin</strong>
+              <ul class="bouquet-feature-items">
+                <li>Menambah, mengubah, dan menghapus produk</li>
+                <li>Mengecek pesanan yang masuk</li>
+                <li>Memperbarui status pesanan, dari dikemas sampai dikirim</li>
+                <li>Melihat total pendapatan</li>
+                <li>Melihat riwayat pesanan beserta rating dari pelanggan</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </dialog>
+
+      <dialog class="project-detail-dialog" id="recipe-detail" aria-labelledby="recipe-detail-title">
+        <div class="project-detail-content">
+          <button class="project-detail-close" type="button" aria-label="Tutup detail">×</button>
+          <h2 id="recipe-detail-title">Aplikasi resep makanan tradisional</h2>
+          <div class="project-detail-gallery project-detail-gallery-portrait">
+            <img class="project-detail-image" src="assets/recipe-admin-1.jpg" alt="Halaman pertama aplikasi Admin Resep Tradisional">
+            <img class="project-detail-image" src="assets/recipe-admin-2.jpg" alt="Halaman kedua aplikasi Admin Resep Tradisional">
+          </div>
+          <h3>Fitur proyek</h3>
+          <ul class="project-detail-feature-list">
+            <li>
+              <strong>Kelola resep</strong>
+              <p>Admin bisa menambah resep baru, mengubah resep yang sudah ada, dan menghapus resep yang tidak dipakai.</p>
+            </li>
+            <li>
+              <strong>Daftar resep</strong>
+              <p>Semua resep yang sudah ditambahkan tampil dalam satu daftar, jadi gampang dilihat.</p>
+            </li>
+            <li>
+              <strong>Ringkasan data</strong>
+              <p>Menampilkan total resep dan total kategori, serta jumlah resep di tiap kategori.</p>
+            </li>
+          </ul>
+        </div>
+      </dialog>
+
       <section class="training section-wide" id="pelatihan">
         <div class="section-heading">
           <h2>Pelatihan</h2>
         </div>
         <article class="training-card">
           <div class="training-description">
+            <p class="eyebrow">HTML · CSS · JavaScript · Node.js · Gemini API</p>
             <h3>Pinky AI</h3>
-            <p>Chatbot asisten belajar berbasis Gemini API untuk merangkum materi dan menjawab pertanyaan pengguna.</p>
-            <p class="training-tags">HTML · CSS · JavaScript · Node.js · Gemini API</p>
+            <button class="button project-detail-trigger" type="button" aria-haspopup="dialog" aria-controls="pinky-detail">
+              Lihat detail <span aria-hidden="true">→</span>
+            </button>
           </div>
           <div class="media-pair chatbot-screenshots">
             <a class="media-placeholder screenshot-link" href="assets/pinky-ai-summary.png" target="_blank" rel="noopener" aria-label="Buka screenshot ringkasan Pinky AI">
@@ -172,6 +266,37 @@
           </div>
         </article>
       </section>
+
+      <dialog class="project-detail-dialog" id="pinky-detail" aria-labelledby="pinky-detail-title">
+        <div class="project-detail-content">
+          <button class="project-detail-close" type="button" aria-label="Tutup detail">×</button>
+          <p class="eyebrow">HTML · CSS · JavaScript · Node.js · Gemini API</p>
+          <h2 id="pinky-detail-title">Pinky AI</h2>
+          <div class="project-detail-gallery">
+            <img class="project-detail-image" src="assets/pinky-ai-summary.png" alt="Pinky AI merangkum materi dan menampilkan poin penting">
+            <img class="project-detail-image" src="assets/pinky-ai-chat.png" alt="Tampilan tanya jawab materi dengan Pinky AI">
+          </div>
+          <h3>Fitur Pinky AI</h3>
+          <ul class="project-detail-feature-list">
+            <li>
+              <strong>Ringkasan</strong>
+              <p>Materi bisa ditempel sebagai teks atau diunggah sebagai file. Pinky AI akan membuatkan ringkasan dan poin-poin pentingnya.</p>
+            </li>
+            <li>
+              <strong>Kuis</strong>
+              <p>Dari materi yang sama, Pinky AI bisa membuat soal latihan untuk mengecek apakah isinya sudah dipahami.</p>
+            </li>
+            <li>
+              <strong>Flashcard</strong>
+              <p>Materi juga bisa dijadikan kartu belajar, jadi lebih gampang dihafal.</p>
+            </li>
+            <li>
+              <strong>Tanya jawab</strong>
+              <p>Kalau ada bagian yang belum paham, bisa langsung ditanyakan lewat fitur obrolan. Jawabannya dibuat oleh Gemini AI berdasarkan materi yang diunggah.</p>
+            </li>
+          </ul>
+        </div>
+      </dialog>
 
       <section class="contact" id="kontak">
         <div class="contact-inner section-wide">

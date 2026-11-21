@@ -2,6 +2,25 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const backToTop = document.querySelector(".back-to-top");
 
+document.querySelectorAll(".project-detail-trigger").forEach((trigger) => {
+  const dialog = document.querySelector(`#${trigger.getAttribute("aria-controls")}`);
+  const closeButton = dialog.querySelector(".project-detail-close");
+
+  trigger.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+});
+
 menuToggle.addEventListener("click", () => {
   const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
   menuToggle.setAttribute("aria-expanded", String(!isExpanded));
